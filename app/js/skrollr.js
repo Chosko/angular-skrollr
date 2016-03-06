@@ -100,6 +100,15 @@ angular.module("sn.skrollr", [])
                         _this.skrollrInstance.destroy();
                         _this.hasBeenInitialised = false;
                     }
+                },
+
+                getSkrollrInstance: function () {
+                  if (_this.hasBeenInitialised) {
+                      return _this.skrollrInstance;
+                  }
+                  else {
+                    return null;
+                  }
                 }
             };
 

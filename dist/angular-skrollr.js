@@ -1,4 +1,4 @@
-/*! angular-skrollr - v0.1.5 - 2015-12-08 */
+/*! angular-skrollr - v0.1.5 - 2016-03-06 */
 "use strict";
 /**
  * Wrap skrollr.js
@@ -101,6 +101,15 @@ angular.module("sn.skrollr", [])
                         _this.skrollrInstance.destroy();
                         _this.hasBeenInitialised = false;
                     }
+                },
+
+                getSkrollrInstance: function () {
+                  if (_this.hasBeenInitialised) {
+                      return _this.skrollrInstance;
+                  }
+                  else {
+                    return null;
+                  }
                 }
             };
 
